@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    {% load static %}
+    <body lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        {# TODO: Call the Title Dynamically#}
+        <title>Home 03</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {#    TODO: call all the major components from a Base File#}
+        <!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="{% static 'images/icons/favicon.png' %}"/>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css"
+              href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'fonts/linearicons-v1.0.0/icon-font.min.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/slick/slick.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/MagnificPopup/magnific-popup.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+        <!--===============================================================================================-->
+    </head>
+    </body>
+    {% include 'BaseTemplates/navbar.html' %}
+
+    {% block body %}
+
+    {% endblock body %}
+    <body>
+    </body>
+</html>
