@@ -10,6 +10,3 @@ def home(request):
 def products(request):
     return render(request, template_name='BaseTemplates/product.html')
 
-
-def det(request):
-    return render(request, 'BaseTemplates/navbar_product.html')
