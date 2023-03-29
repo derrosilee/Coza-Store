@@ -10,3 +10,6 @@ def home(request):
 def products(request):
     return render(request, template_name='BaseTemplates/product.html')
 
+
+def product_detail(request):
+    return  render(request, template_name='BaseTemplates/product-detail.html')
