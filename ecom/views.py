@@ -21,3 +21,6 @@ def track_order(request):
 
 def cart(request):
     return render(request, template_name='BaseTemplates/shopping-cart.html')
+
+def about(request):
+    return render(request, template_name='BaseTemplates/about.html')
