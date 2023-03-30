@@ -7,6 +7,10 @@ def home(request):
     return render(request, template_name='BaseTemplates/index.html')
 
 
+def login(request):
+    return render(request, template_name='BaseTemplates/users/login.html')
+
+
 def products(request):
     return render(request, template_name='BaseTemplates/product.html')
 
@@ -25,6 +29,8 @@ def cart(request):
 
 def checkout(request):
     return render(request, template_name='BaseTemplates/checkout/checkout.html')
+
+
 
 
 def about(request):
