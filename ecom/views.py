@@ -23,6 +23,10 @@ def cart(request):
     return render(request, template_name='BaseTemplates/shopping-cart.html')
 
 
+def checkout(request):
+    return render(request, template_name='BaseTemplates/checkout.html')
+
+
 def about(request):
     return render(request, template_name='BaseTemplates/about.html')
 
