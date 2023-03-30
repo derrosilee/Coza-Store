@@ -24,7 +24,7 @@ def cart(request):
 
 
 def checkout(request):
-    return render(request, template_name='BaseTemplates/checkout.html')
+    return render(request, template_name='BaseTemplates/checkout/checkout.html')
 
 
 def about(request):
