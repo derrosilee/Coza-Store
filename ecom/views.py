@@ -12,4 +12,8 @@ def products(request):
 
 
 def product_detail(request):
-    return  render(request, template_name='BaseTemplates/product-detail.html')
+    return render(request, template_name='BaseTemplates/product-detail.html')
+
+
+def track_order(request):
+    return render(request, template_name='BaseTemplates/track-order.html')
