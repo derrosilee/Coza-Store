@@ -1,7 +1,10 @@
-{% extends 'ecom/customer_base.html' %}
+{% extends 'BaseTemplates/base.html' %}
 {% load static %}
 
-{% block content %}
+{% block body %}
+    {% include 'BaseTemplates/navbar/navbar_product.html' %}
+    {% include 'BaseTemplates/SideBar/sidebar_content.html' %}
+    {% include 'BaseTemplates/SideBar/sidebar_cart.html' %}
 <style media="screen">
   @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
@@ -82,4 +85,5 @@
     {%endfor%}
 </div>
 <br><br><br><br><br>
-{% endblock content %}
+    {% include 'BaseTemplates/footer.html' %}
+{% endblock body %}
