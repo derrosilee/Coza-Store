@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:a="http://www.w3.org/1999/html">
 
 <head>
   <!-- Required meta tags -->
@@ -28,7 +28,10 @@
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo">
-                <img src="{% static 'images/icons/logo-02.png' %}" alt="logo">
+                  <a href="{% url 'home' %}">
+                       <img src="{% static 'images/icons/logo-01.png' %}" alt="logo">
+                  </a>
+
               </div>
               <h4>Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
