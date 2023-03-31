@@ -11,6 +11,7 @@ from django.conf import settings
 # Create your views here.
 
 def home(request):
+    p
     return render(request, template_name='BaseTemplates/index.html')
 
 
@@ -22,7 +23,7 @@ def login(request):
     return render(request, template_name='BaseTemplates/users/login.html')
 
 
-def products(request):
+def products_view(request):
     return render(request, template_name='BaseTemplates/product.html')
 
 
