@@ -6,12 +6,21 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
 from django.conf import settings
+from . import models
 
 
 # Create your views here.
 
 def home(request):
-    p
+    # products = models.Product.objects.all()
+    # if 'product_ids' in request.COOKIES:
+    #     products_ids = request.COOKIES['product_ids']
+    #     counter = products_ids.split('|')
+    #     product_count_in_cart = len(set(counter))
+    # else:
+    #     product_count_in_cart = 0
+    # if request.user.is_authenticated:
+    #     return HttpResponseRedirect()
     return render(request, template_name='BaseTemplates/index.html')
 
 
