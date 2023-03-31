@@ -10,7 +10,7 @@ urlpatterns = [
     path('track_order/', views.track_order, name='track_order'),
     path('cart/', views.cart, name='cart'),
     path('checkout/', views.checkout, name='checkout'),
-    path('admin_dashboard/', views.admin_dashboard_view, name='admin_dashboard'),
+    path('admin_dashboard_view/', views.admin_dashboard_view, name='admin_dashboard_view'),
 
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact')

@@ -44,4 +44,4 @@ def contact(request):
 
 
 def admin_dashboard_view(request):
-    return render(request, template_name='admin/index.html')
+    return render(request, template_name='AdminTemplates/index.html')
