@@ -41,3 +41,7 @@ def about(request):
 
 def contact(request):
     return render(request, template_name='BaseTemplates/contact.html')
+
+
+def admin_dashboard_view(request):
+    return render(request, template_name='admin/index.html')
