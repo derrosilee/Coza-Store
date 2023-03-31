@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse
-from .models import Product, ProductCategory, Order, Customer
+# from .models import Product, ProductCategory, Orders, Customer
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.mail import send_mail
 from django.contrib.auth.models import Group
