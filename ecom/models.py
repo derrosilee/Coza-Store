@@ -58,7 +58,7 @@ class Product(models.Model):
     image5 = models.ImageField(upload_to='product_image/', null=True, blank=True)
 
 
-class Order(models.Model):
+class Orders(models.Model):
     STATUS = (
         ('Pending', 'Pending'),
         ('Order Confirmed', 'Order Confirmed'),
