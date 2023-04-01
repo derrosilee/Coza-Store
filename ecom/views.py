@@ -116,6 +116,25 @@ def admin_view_booking_view(request):
     return render(request, 'AdminTemplates/view-order.html', {'data': zip(ordered_products, ordered_bys, orders)})
 
 
+# admin view the product
+# @login_required(login_url='adminlogin')
+def admin_products_view(request):
+    products = models.Product.objects.all()
+    return render(request, 'AdminTemplates/manage-products.html', {'products': products})
+
+
+# @login_required(login_url='adminlogin')
+def update_product_view(request, pk):
+    product = models.Product.objects.get(id=pk)
+    productForm = forms.ProductForm(instance=product)
+    if request.method == 'POST':
+        productForm = forms.ProductForm(request.POST, request.FILES, instance=product)
+        if productForm.is_valid():
+            productForm.save()
+            return redirect('admin-products')
+    return render(request, 'AdminTemplates/manage-products.html', {'productForm': productForm})
+
+
 # admin view customer table
 # @login_required(login_url='adminlogin')
 def view_customer_view(request):

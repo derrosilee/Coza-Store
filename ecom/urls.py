@@ -19,9 +19,10 @@ urlpatterns = [
     path('admin_dashboard_view/', views.admin_dashboard_view, name='admin_dashboard_view'),
     path('admin-add-product', views.admin_add_product_view, name='admin-add-product'),
     path('admin-view-booking', views.admin_view_booking_view, name='admin-view-booking'),
+    path('update-product/<int:pk>', views.update_product_view, name='update-product'),
+    path('admin-products', views.admin_products_view, name='admin-products'),
 
-
-    path('view-customer', views.view_customer_view,name='view-customer'),
+    path('view-customer', views.view_customer_view, name='view-customer'),
 
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact')
