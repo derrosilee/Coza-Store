@@ -57,6 +57,9 @@ class Product(models.Model):
     image4 = models.ImageField(upload_to='product_image/', null=True, blank=True)
     image5 = models.ImageField(upload_to='product_image/', null=True, blank=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Orders(models.Model):
     STATUS = (
