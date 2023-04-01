@@ -116,6 +116,13 @@ def admin_view_booking_view(request):
     return render(request, 'AdminTemplates/view-order.html', {'data': zip(ordered_products, ordered_bys, orders)})
 
 
+# admin view customer table
+# @login_required(login_url='adminlogin')
+def view_customer_view(request):
+    customers = models.Customer.objects.all()
+    return render(request, 'AdminTemplates/customers.html', {'customers': customers})
+
+
 def search_view(request):
     # whatever user write in search box we get in query
     query = request.GET['query']
