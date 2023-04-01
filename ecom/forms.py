@@ -21,7 +21,7 @@ class CustomerForm(forms.ModelForm):
 class ProductForm(forms.ModelForm):
     class Meta:
         model = models.Product
-        fields = ['name', 'price', 'description', 'banner_image']
+        fields = ['name', 'price', 'description', 'banner_image', 'image2', 'image3', 'image4', 'image5']
 
 
 # address of shipment

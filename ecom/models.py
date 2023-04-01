@@ -20,37 +20,37 @@ class Customer(models.Model):
         return self.user.first_name
 
 
-class ProductCategory(models.Model):
-    gender = models.CharField(max_length=40)
-    clothing = models.CharField(max_length=100)
-    shoes = models.CharField(max_length=40)
-    accessories = models.CharField(max_length=50)
-    bags = models.CharField(max_length=40)
-
-    def __str__(self):
-        return self.gender
+# class ProductCategory(models.Model):
+#     gender = models.CharField(max_length=40)
+#     clothing = models.CharField(max_length=100)
+#     shoes = models.CharField(max_length=40)
+#     accessories = models.CharField(max_length=50)
+#     bags = models.CharField(max_length=40)
+#
+#     def __str__(self):
+#         return self.gender
 
 
 class Product(models.Model):
-    SIZES = (
-        ('Size S', 'Size S'),
-        ('Size M', 'Size M'),
-        ('Size L', 'Size L'),
-        ('Size XL', 'Size Xl'),
-    )
-    COLORS = (
-        ('Black', 'Black'),
-        ('White', 'White'),
-        ('Blue', 'Blue'),
-        ('Gray', 'Gray'),
-    )
-    category = models.ForeignKey('ProductCategory', on_delete=models.CASCADE, null=True)
+    # SIZES = (
+    #     ('Size S', 'Size S'),
+    #     ('Size M', 'Size M'),
+    #     ('Size L', 'Size L'),
+    #     ('Size XL', 'Size Xl'),
+    # )
+    # COLORS = (
+    #     ('Black', 'Black'),
+    #     ('White', 'White'),
+    #     ('Blue', 'Blue'),
+    #     ('Gray', 'Gray'),
+    # )
+    # category = models.ForeignKey('ProductCategory', on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=40)
     description = models.TextField()
     price = models.PositiveIntegerField()
-    color = models.CharField(max_length=50, null=True, choices=COLORS)
-    size = models.CharField(max_length=50, null=True, choices=SIZES)
-    item_count = models.PositiveIntegerField()
+    # color = models.CharField(max_length=50, null=True, choices=COLORS)
+    # size = models.CharField(max_length=50, null=True, choices=SIZES)
+    # item_count = models.PositiveIntegerField()
     banner_image = models.ImageField(upload_to='product_image/')
     image2 = models.ImageField(upload_to='product_image/', null=True, blank=True)
     image3 = models.ImageField(upload_to='product_image/', null=True, blank=True)
