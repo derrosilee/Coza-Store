@@ -1,0 +1,79 @@
+{% extends 'AdminTemplates/base.html' %}
+{% load widget_tweaks %}
+
+{% block body %}
+    <body>
+    {% include 'AdminTemplates/navbar.html' %}
+    <!-- container section start -->
+    <section id="container" class="">
+
+
+        <!--sidebar star
+
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="page-header"><i class="fa fa-file-text-o"></i> Form elements</h3>
+                        <ol class="breadcrumb">
+                            <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+                            <li><i class="icon_document_alt"></i>Forms</li>
+                            <li><i class="fa fa-file-text-o"></i>Form elements</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- Basic Forms & Horizontal Forms-->
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                Basic Forms
+                            </header>
+                            <div class="panel-body">
+                                <form role="form" method="post">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="">First name</label>
+                                        {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Last name</label>
+                                        {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Username</label>
+                                        {% render_field userForm.username class="form-control" placeholder="Username" %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Contact</label>
+                                        {% render_field customerForm.mobile class="form-control" placeholder="Contact" %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Profile Picture</label>
+                                        {% render_field customerForm.profile_pic class="form-control" placeholder="Profile Picture" %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Address</label>
+                                        {% render_field customerForm.address class="form-control" placeholder="Address" %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Password</label>
+                                        {% render_field userForm.password class="form-control" placeholder="Password" %}
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- page end-->
+            </section>
+        </section>
+
+    </body>
+
+{% endblock body %}

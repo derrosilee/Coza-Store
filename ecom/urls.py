@@ -9,6 +9,11 @@ urlpatterns = [
     path('customerlogin', LoginView.as_view(template_name='BaseTemplates/users/login.html'), name='customerlogin'),
     path('afterlogin', views.afterlogin_view, name='afterlogin'),
     path('logout', LogoutView.as_view(template_name='BaseTemplates/users/logout.html'), name='logout'),
+
+    path('view-customer', views.view_customer_view, name='view-customer'),
+    path('update-customer/<int:pk>', views.update_customer_view, name='update-customer'),
+    path('delete-customer/<int:pk>', views.delete_customer_view, name='delete-customer'),
+
     path('products_view/', views.products_view, name='products_view'),
     path('search', views.search_view, name='search'),
     path('add-to-cart/<int:pk>/', views.add_to_cart_view, name='add-to-cart'),

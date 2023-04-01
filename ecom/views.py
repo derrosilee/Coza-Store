@@ -95,6 +95,41 @@ def admin_dashboard_view(request):
 
 # admin add product by clicking on floating button
 # @login_required(login_url='adminlogin')
+
+# @login_required(login_url='adminlogin')
+def update_customer_view(request, pk):
+    customer = models.Customer.objects.get(id=pk)
+    user = models.User.objects.get(id=customer.user_id)
+    userForm = forms.CustomerUserForm(instance=user)
+    customerForm = forms.CustomerForm(request.FILES, instance=customer)
+    mydict = {'userForm': userForm, 'customerForm': customerForm}
+    if request.method == 'POST':
+        userForm = forms.CustomerUserForm(request.POST, instance=user)
+        customerForm = forms.CustomerForm(request.POST, instance=customer)
+        if userForm.is_valid() and customerForm.is_valid():
+            user = userForm.save()
+            user.set_password(user.password)
+            user.save()
+            customerForm.save()
+            return redirect('view-customer')
+    return render(request, 'AdminTemplates/manage-customer.html', context=mydict)
+
+# admin view customer table
+# @login_required(login_url='adminlogin')
+def view_customer_view(request):
+    customers = models.Customer.objects.all()
+    return render(request, 'AdminTemplates/customers.html', {'customers': customers})
+
+
+# admin delete customer
+# @login_required(login_url='adminlogin')
+def delete_customer_view(request, pk):
+    customer = models.Customer.objects.get(id=pk)
+    user = models.User.objects.get(id=customer.user_id)
+    user.delete()
+    customer.delete()
+    return redirect('view-customer')
+
 def admin_add_product_view(request):
     productForm = forms.ProductForm()
     if request.method == 'POST':
