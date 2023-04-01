@@ -132,7 +132,14 @@ def update_product_view(request, pk):
         if productForm.is_valid():
             productForm.save()
             return redirect('admin-products')
-    return render(request, 'AdminTemplates/manage-products.html', {'productForm': productForm})
+    return render(request, 'AdminTemplates/update-product.html', {'productForm': productForm})
+
+
+# @login_required(login_url='adminlogin')
+def delete_product_view(request, pk):
+    product = models.Product.objects.get(id=pk)
+    product.delete()
+    return redirect('admin-products')
 
 
 # admin view customer table

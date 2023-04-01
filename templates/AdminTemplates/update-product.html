@@ -1,0 +1,69 @@
+{% extends 'AdminTemplates/base.html' %}
+{% load widget_tweaks %}
+
+{% block body %}
+<body>
+{% include 'AdminTemplates/navbar.html' %}
+  <!-- container section start -->
+  <section id="container" class="">
+
+
+    <!--sidebar star
+
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-file-text-o"></i> Form elements</h3>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="icon_document_alt"></i>Forms</li>
+              <li><i class="fa fa-file-text-o"></i>Form elements</li>
+            </ol>
+          </div>
+        </div>
+        <!-- Basic Forms & Horizontal Forms-->
+
+
+
+
+        <div class="row">
+            <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading">
+                Basic Forms
+              </header>
+              <div class="panel-body">
+                <form role="form" method="post">
+                    {% csrf_token %}
+                  <div class="form-group">
+                    <label for="">Name</label>
+                    {% render_field productForm.name class="form-control" placeholder="Product Name" %}
+                  </div>
+                  <div class="form-group">
+                    <label for="">Product Description</label>
+                     {% render_field productForm.description class="form-control" placeholder="Description" %}
+                  </div>
+                    <div class="form-group">
+                    <label for="">Product Price</label>
+                     {% render_field productForm.price class="form-control" placeholder="Price" %}
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                   {% render_field productForm.banner_image class="form-control" placeholder="product_image" %}
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- page end-->
+      </section>
+    </section>
+
+</body>
+
+{% endblock body %}
