@@ -58,6 +58,8 @@ def afterlogin_view(request):
         return redirect('admin-dashboard')
 
 
+
+
 # ---------------------------------------------------------------------------------
 # ------------------------ ADMIN RELATED VIEWS START ------------------------------
 # ---------------------------------------------------------------------------------
@@ -374,8 +376,8 @@ def payment_success_view(request):
     return response
 
 
-def login(request):
-    return render(request, template_name='BaseTemplates/users/login.html')
+# def login(request):
+#     return render(request, template_name='BaseTemplates/users/login.html')
 
 
 def products_view(request):
