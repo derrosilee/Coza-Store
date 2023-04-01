@@ -102,6 +102,20 @@ def admin_add_product_view(request):
         return HttpResponseRedirect('admin-products')
     return render(request, 'AdminTemplates/add-product.html', {'productForm': productForm})
 
+
+# @login_required(login_url='adminlogin')
+def admin_view_booking_view(request):
+    orders = models.Orders.objects.all()
+    ordered_products = []
+    ordered_bys = []
+    for order in orders:
+        ordered_product = models.Product.objects.all().filter(id=order.product.id)
+        ordered_by = models.Customer.objects.all().filter(id=order.customer.id)
+        ordered_products.append(ordered_product)
+        ordered_bys.append(ordered_by)
+    return render(request, 'AdminTemplates/view-order.html', {'data': zip(ordered_products, ordered_bys, orders)})
+
+
 def search_view(request):
     # whatever user write in search box we get in query
     query = request.GET['query']

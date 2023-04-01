@@ -18,6 +18,7 @@ urlpatterns = [
     path('checkout/', views.checkout, name='checkout'),
     path('admin_dashboard_view/', views.admin_dashboard_view, name='admin_dashboard_view'),
     path('admin-add-product', views.admin_add_product_view, name='admin-add-product'),
+    path('admin-view-booking', views.admin_view_booking_view, name='admin-view-booking'),
 
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact')
